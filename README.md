@@ -30,7 +30,6 @@ cal 8 2016 ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.001.png)
 
 **Description:** 
 
-3
 
 **Used to clear the terminal window.** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**Command:** 
 
@@ -48,7 +47,6 @@ exit ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.png)
 
 free ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.001.png)
 
-5
 
 **Description:** 
 
@@ -68,7 +66,6 @@ free  -k ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.png)
 
 free  -m 
 
-7
 
 **Description: ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**
 
@@ -88,7 +85,6 @@ shutdown ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.008.png)
 
 **Command:** 
 
-9
 
 shutdown  -h now ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.012.png)
 
@@ -116,7 +112,7 @@ echo $OLDPWD ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.012.png)
 
 **Executes the 11th command in command history.** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.005.png)**Command:** 
 
-!11 ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.013.png)
+!11
 
 **Description:** 
 
@@ -128,7 +124,6 @@ history ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.014.png)
 
 **Power off or reboot the Operating system.** 
 
-11
 
 **Command:** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)
 
@@ -148,7 +143,6 @@ ls  -s ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.001.png)
 
 **Description:** 
 
-13
 
 **View mounted file systems.** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**Command:** 
 
@@ -166,7 +160,6 @@ du ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.png)
 
 uptime ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.001.png)
 
-15
 
 **Description:** 
 
@@ -186,7 +179,6 @@ date -- set 12:11:02 ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.p
 
 ifconfig 
 
-17
 
 **Description: ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**
 
@@ -206,7 +198,6 @@ ps ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.008.png)
 
 **Command:** 
 
-19
 
 df ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.012.png)
 
@@ -246,8 +237,6 @@ kill ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.014.png)
 
 **Change the current working directory.** 
 
-23
-
 **Command:** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)
 
 cd ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.005.png)
@@ -265,8 +254,6 @@ login ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.png)
 lsof ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.001.png)
 
 **Description:** 
-
-25
 
 **List USB devices.** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**Command:** 
 
@@ -340,7 +327,6 @@ init 0 ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.014.png)
 
 **List files by date.** 
 
-31
 
 **Command:** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)
 
@@ -360,7 +346,6 @@ echo $? ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.001.png)
 
 **Description:** 
 
-33
 
 **Lists a few useful info commands.** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**Command:** 
 
@@ -396,7 +381,6 @@ last  -1 username ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.png)
 
 ls  -X 
 
-37
 
 **Description: ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**
 
@@ -416,7 +400,6 @@ pstree ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.008.png)
 
 **Command:** 
 
-39
 
 reset ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.012.png)
 
@@ -456,7 +439,6 @@ cd - ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.014.png)
 
 **Displays a list of shell built-in commands.** 
 
-41
 
 **Command:** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)
 
@@ -476,7 +458,6 @@ mkdir myfiles ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.001.png)
 
 **Description:** 
 
-43
 
 **Remove the directory myfiles.** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**Command:** 
 
@@ -512,7 +493,6 @@ useradd "root1" ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.png)
 
 passwd "root1" 
 
-47
 
 **Description: ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**
 
@@ -532,7 +512,6 @@ whoami ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.008.png)
 
 **Command:** 
 
-49
 
 logname ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.012.png)
 
@@ -572,7 +551,6 @@ uname  --version ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.014.png)
 
 **Print the kernel release.** 
 
-53
 
 **Command:** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)
 
@@ -592,7 +570,6 @@ netstat  -a ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.001.png)
 
 **Description:** 
 
-55
 
 **Display only TCP (Transmission Control Protocol) port connections.** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**Command:** 
 
@@ -610,7 +587,6 @@ netstat  -au ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.png)
 
 netstat  -I ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.001.png)
 
-57
 
 **Description:** 
 
@@ -630,7 +606,6 @@ netstat  -lu ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.png)
 
 **Command:** 
 
-59
 
 id ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.012.png)
 
@@ -672,7 +647,6 @@ yum install httpd ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.001.png)
 
 **Description:** 
 
-61
 
 **install apache (Ubuntu).** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**Command:** 
 
@@ -707,8 +681,6 @@ apt remove httpd ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.png)
 **Display usage summary for the command (date).** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.008.png)**Command:** 
 
 date --help 
-
-65
 
 **Description: ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**
 
@@ -768,7 +740,6 @@ gzip 1.txt ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.014.png)
 
 **Uncompresses file (1.txt) compressed by gzip.** 
 
-71
 
 **Command:** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)
 
@@ -787,8 +758,6 @@ cat 1.txt ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.png)
 ncal ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.001.png)
 
 **Description:** 
-
-73
 
 **Removes the file (1.txt).** ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**Command:** 
 
@@ -824,7 +793,6 @@ tail 1.txt ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.007.png)
 
 tail  -n N 1.txt 
 
-77
 
 **Description: ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.004.png)**
 
@@ -844,7 +812,6 @@ wc -m 1.txt ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.008.png)
 
 **Command:** 
 
-79
 
 wc -L 1.txt ![](Aspose.Words.daf6bc44-28ad-4f04-9882-6218c69992a8.012.png)
 
