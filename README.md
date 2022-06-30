@@ -47,3 +47,28 @@
 | Display the current directory                                                                      | pwd                     |
 | Displays CPU architecture information (seuch as number of CPUs , threads, cores,sockets, and more) | lscpu                   |
 | Displays the number of processing units available to the current process                           | nproc                   |
+| The system performs an immediate reboot                                                            | init 6                  |
+| Power-off the machine                                                                              | init 0                  |
+| List files by date                                                                                 | ls -lrt                 |
+| Report information about storage devices such as hard disks flash drives etc                       | lsblk                   |
+| Show exit status of previous command                                                               | echo $?                 |
+| Lists a few useful info commands                                                                   | info                    |
+| Prints current year's calendar                                                                     | cal -y                  |
+| Check the status of all the services                                                               | service --status-all    |
+| Display time in hh:mm:ss                                                                           | date +%T                |
+| Tells when the user last logged on and off and from where                                          | last -1 username        |
+| Sort files and directories by extension name                                                       | ls -X                   |
+| Display the manual for the pwd command                                                             | man pwd                 |
+| Displays information about running processes in the form of a tree                                 | pstree                  |
+| Resets your terminal                                                                               | reset                   |
+| Displays What date is it this Friday                                                               | date -d fri             |
+| Displays the size of each individual file                                                          | du -a                   |
+| Display information about the Advanced configuration and power Interface                           | acpi                    |
+| Takes you two folders back                                                                         | cd /                    |
+| Takes you to the previous directory                                                                | cd -                    |
+| Displays a list of shell built-in commands                                                         | help                    |
+| Lists your last logins                                                                             | last yourusername       |
+| Create a new directory called myfiles                                                              | mkdir myfiles           |
+| Remove the directory myfiles                                                                       | rmdir myfiles           |
+| Disable password for a specific user "root1"                                                       | passwd -d root1         |
+| Switch to user "root1"                                                                             | sudo su root1           |
