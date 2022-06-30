@@ -1,3 +1,7 @@
+<img width="255" alt="image" src="https://user-images.githubusercontent.com/65080702/176673834-a59df0e7-e265-4e26-ab84-72286eac0420.png"><img width="255" alt="image" src="https://user-images.githubusercontent.com/65080702/176674008-a14b262f-3a77-485e-bf5d-2336eb0715fa.png"><img width="255" alt="image" src="https://user-images.githubusercontent.com/65080702/176674262-cb02ec7e-693c-4ace-be6c-a2469222823e.png">
+
+
+
 # Ubuntu-20.04--LTS-SEVER_Version-Tutorial
 all commands and interacting with cli tools of debain base
 
