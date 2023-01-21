@@ -1,4 +1,6 @@
 #! /bin/bash
+sudo apt-get install net-tools -y 
+netstat -i  #check the internet interface
 cat >> /etc/netplan/00-installer-config.yaml << EOF
 network:
   version: 2
