@@ -1,5 +1,6 @@
 # **How to Configure Static IP Address on Ubuntu 20.04**
-` `![image](Aspose.Words.bb211244-1601-4078-91ad-7dc964c81cf1.001.png)
+
+![image](https://user-images.githubusercontent.com/65080702/215354246-17481ed9-935f-414d-a04e-34e2f8d2d82a.png)
 
 Usually, when a client system connects to a network via WIFI or an ethernet cable, it automatically picks an IP address from the router. This is made possible through the DHCP server which auto-assigns IP addresses to clients from a pool of addresses. The drawback with DHCP is that once the DHCP lease time has lapsed, the IP address of a system changes to a different one, and this leads to a disconnection in case the system was used for a particular service such as a file server. For this reason, you may want to set a static IP address so that it never changes even when the lease time is up.
 
@@ -14,23 +15,14 @@ For this guide, we will focus on setting a static IP address using both the GUI 
 
 Suppose,
 
-IP Address: 192.168.29.243
-
-Netmask: 255.255.255.0
-
-Default gateway route address: 192.168.29.1
-
-DNS nameserver addresses: 8.8.8.8, 192.168.29.1
-
-
-
+<img width="317" alt="image" src="https://user-images.githubusercontent.com/65080702/215354436-3d856f1e-22dc-4b18-b27b-c0546a19dc10.png">
 
 
 This information will be different for you, so replace the values accordingly according to your subnet.
 
-Set Static IP Address on Ubuntu 22.04 Desktop
+#### ***Set Static IP Address on Ubuntu 22.04 Desktop***
 
-Set Static IP Address on Ubuntu 22.04 Server
+#### ***Set Static IP Address on Ubuntu 22.04 Server***
 
 How to Set Static IP Address on Ubuntu Desktop
 
@@ -62,45 +54,43 @@ Once again, click on the gear icon to reveal the new IP configuration as shown.
 
 Verify Network Configuration
 
-You can also confirm the IP address on the terminal by running the ifconfig or ip addr command.
+#### ***You can also confirm the IP address on the terminal by running the ifconfig or ip addr command.***
 
-$ ifconfig
+`$ ifconfig`
 
 
 
 OR
 
-$ ip addr
+`$ ip addr`
+
+
+
+#### *** Check IP Address ***
+
+#### *** To confirm the DNS servers, run the command: ***
+
+`$ systemd-resolve --status`
 
 
 
 
 
-Check IP Address
-
-To confirm the DNS servers, run the command:
-
-$ systemd-resolve --status
-
-
-
-
-
-Check DNS Servers
+ ####  *** Check DNS Servers ***
 
 How to Set Static IP Address on Ubuntu Server Using Netplan
 
 We have seen how we can configure a static IP address graphically on Ubuntu 22.04 desktop. The other option is configuring a static IP address on the terminal using Netplan. Developed by Canonical, Netplan is a command-line utility used to configure networking on modern Ubuntu distributions. Netplan makes use of YAML files to configure network interfaces. You can configure an interface to acquire an IP dynamically using DHCP protocol or set a static IP.
 
-If $netplan command is not working then install the net-tools:
+If `$netplan` command is not working then install the net-tools:
 
-sudo apt-get install net-tools -y
+`sudo apt-get install net-tools -y`
 
 
 
-Open your terminal and head over to the /etc/netplan directory. You will find a YAML configuration file which you will use to configure the IP address.
+Open your terminal and head over to the `/etc/netplan` directory. You will find a YAML configuration file which you will use to configure the IP address.
 
-In my case the YAML file is 01-network-manager-all.yaml with the default settings as shown.
+In my case the YAML file is `01-network-manager-all.yaml` with the default settings as shown.
 ## **Step3: Netplan YAML File**
 
 
@@ -108,40 +98,31 @@ For the Ubuntu server, the YAML file is 00-installer-config.yaml and these are t
 
 Default Network Settings
 
-To configure a static IP, copy and paste the configuration below. Be mindful of the spacing in the YAML file.
-
+## *To configure a static IP, copy and paste the configuration below. Be mindful of the spacing in the YAML file.*
+```
 network:
+  version: 2
+  ethernets:
+     ens33:
+        dhcp4: false
+        addresses: [192.168.29.104/24]
+        routes:
+        - to: default
+          via: 192.168.29.1
+        nameservers:
+          addresses: [8.8.8.8, 8.8.4.4]
 
-`  `version: 2
-
-`  `ethernets:
-
-`     `ens33:
-
-`        `dhcp4: false
-
-`        `addresses: [192.168.29.104/24]
-
-`        `routes:
-
-`        `- to: default
-
-`          `via: 192.168.29.1
-
-`        `nameservers:
-
-`          `addresses: [8.8.8.8, 8.8.4.4]
-
+```
 
 
 Next, save the file and run the netplan command below to save the changes.
 
-$ sudo netplan apply
+`$ sudo netplan apply`
 
 
 
 You can thereafter confirm the IP address of your network interface using the ifconfig command.
 
-$ ifconfig 
+`$ ifconfig` 
 
 Check Ubuntu Server IP Address
