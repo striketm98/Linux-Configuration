@@ -14,4 +14,4 @@ network:
   
 EOF
 netplan apply
-ip a
+ifconfig
