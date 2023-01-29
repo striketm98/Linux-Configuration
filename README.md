@@ -1,120 +1,147 @@
-<img width="255" alt="image" src="https://user-images.githubusercontent.com/65080702/176673834-a59df0e7-e265-4e26-ab84-72286eac0420.png"><img width="255" alt="image" src="https://user-images.githubusercontent.com/65080702/176674008-a14b262f-3a77-485e-bf5d-2336eb0715fa.png"><img width="255" alt="image" src="https://user-images.githubusercontent.com/65080702/176674262-cb02ec7e-693c-4ace-be6c-a2469222823e.png">
+# **How to Configure Static IP Address on Ubuntu 20.04**
+` `![](Aspose.Words.bb211244-1601-4078-91ad-7dc964c81cf1.001.png)
 
-<img width="290" alt="image" src="https://user-images.githubusercontent.com/65080702/176675009-aadaea92-71fb-4b11-8ed8-6949b3e3e3b8.png">
+Usually, when a client system connects to a network via WIFI or an ethernet cable, it automatically picks an IP address from the router. This is made possible through the DHCP server which auto-assigns IP addresses to clients from a pool of addresses. The drawback with DHCP is that once the DHCP lease time has lapsed, the IP address of a system changes to a different one, and this leads to a disconnection in case the system was used for a particular service such as a file server. For this reason, you may want to set a static IP address so that it never changes even when the lease time is up.
+
+In this guide, you will learn how to configure a static IP address on Ubuntu 20.04 server and desktop.
+
+## **Step1:  Network Configuration**
 
 
+Ubuntu uses the Network Manager daemon for managing network configuration. You can configure a static IP either graphically or on the command line.
 
-# Ubuntu-20.04--LTS-SEVER_Version-Tutorial
-It is a free open source Unix O.S. for pc that was originally developed in 1991 by Linus
+For this guide, we will focus on setting a static IP address using both the GUI and on the command line, and here is the IP configuration:
 
-Torvalds, a finish undergraduate student. Linux is neither pure SYSV or pure BSD. To
+Suppose,
 
-maximise code portability, it typically supports SYSV, BSD and POSIX System calls (e.g.
+IP Address: 192.168.29.243
 
-Poll, Select, memset, memcpy).
+Netmask: 255.255.255.0
 
-As Linux has become more popular, several different development streams or
+Default gateway route address: 192.168.29.1
 
-distributed have emerged. E.g. Redhat, Slackware, Mandrake, Debian & Caldera,
-
-Mandriva, Ubuntu.
-
-Redhat is the most popular distribution because it has been ported to a large no. of
-
-hardware platforms (including Intel, Alpha & Sparc).
-
-ARCHITECTURE OF THE LINUX O.S.
-
-Linux has all of the components of a typical O.S.:
-
-1\. Kernel: -- The Linux Kernel includes device drivers support for a large no. of PC
-
-hardware device (graphics cards, network card, hard disks, etc), advanced processor
-
-and memory management features and support for many different types of file
-
-systems.
-
-The kernel (in raw binary form that loaded directly into the memory at system start up
-
-time) is typically found in the file /boot/vmlinuz, while the source files can usually be
-
-found in usr/src/linux.
-
-2\. Shell and GUI: -- Linux supports two forms of command input: through textual
-
-command line shell similar to those found on most Unix Systems. (e.g. sh -- The
-
-Bourne Shell, bash -- The Bourne Against Shell and csh The C Shell) and through
-
-graphical interfaces (GUIs) such as the KDE and GNOME window managers.
-
-3\. System Utilities: -- Virtually every system utility that you would expect to find on
-
-standard implementations of Unix (including every system utility described in the
-
-POSIX specification) has been ported to Linux. This includes commands such as ls,
-
-cp, grep, awk, sed, bc, wc, more and so on.
-
-4\. Application Program: -- Linux distributions typically come with several useful
-
-applications programs as standard e.g. include the emac editor, XV (an image
-
-viewer), gcc (a C Compiler), g++ (a c++ compiler), xfig (a drawing package), latex (a
-
-powerful type setting language) and Soffice (Star office, which is an MS-Office style
-
-clone that can read and write word, excel
+DNS nameserver addresses: 8.8.8.8, 192.168.29.1
 
 
 
-# Assign Static IP Address on Ubuntu 20.04 LTS
-
-#Open cloud-init file “/etc/cloud/cloud.cfg.d/subiquity-disable-cloudinit-networking.cfg” and make sure entry “network: {config: disabled}” is there. In case this entry is missing, then add it manually
 
 
-# How to Set Static IP Address on Ubuntu Server Using Netplan
+This information will be different for you, so replace the values accordingly according to your subnet.
 
-check the current dynamic ip using command below:
+Set Static IP Address on Ubuntu 22.04 Desktop
 
-`ip -a` 
+Set Static IP Address on Ubuntu 22.04 Server
 
-otherwise,
+How to Set Static IP Address on Ubuntu Desktop
 
-`sudo apt-get install net-tool -y`
+On the window that appears, click on the ‘Network’ tab at the left sidebar and then hit the gear icon on the network interface that you wish to configure. In my case, I’m configuring my wired interface.
 
-`ifconfig`
+In the new window that appears, your interface’s network settings will be displayed as shown. By default, the IP address is set to use DHCP to automatically pick an IP address from the Router or any other DHCP server.
 
-We have seen how we can configure a static IP address graphically on Ubuntu 20.04 desktop. The other option is configuring a static IP address on the terminal using Netplan.
+In our case, the current IP address assigned is 192.168.29.104.
 
-Developed by Canonical, Netplan is a command-line utility used to configure networking on modern Ubuntu distributions. Netplan makes use of YAML files to configure network interfaces. You can configure an interface to acquire an IP dynamically using DHCP protocol or set a static IP.
+
+
+Now select the IPv4 tab to start setting the static IP address. As you can see, the IP addressing is set to Automatic (DHCP) by default.
+
+
+
+Click on the ‘Manual’ option and new address fields will be displayed. Fill out your preferred static IP address, netmask, and default gateway.
+
+The DNS is also set to automatic. To manually configure the DNS, click on the toggle to turn off Automatic DNS. Then provide your preferred DNS entries separated by a comma as shown.
+
+
+
+Once all is done, click on the ‘Apply’ button at the top right corner of the window. For the changes to apply, restart the network interface by clicking on the toggle to disable it and enable it again.
+
+
+## **Step2: Enable Network Connection**
+
+
+Once again, click on the gear icon to reveal the new IP configuration as shown.
+
+Verify Network Configuration
+
+You can also confirm the IP address on the terminal by running the ifconfig or ip addr command.
+
+$ ifconfig
+
+
+
+OR
+
+$ ip addr
+
+
+
+
+
+Check IP Address
+
+To confirm the DNS servers, run the command:
+
+$ systemd-resolve --status
+
+
+
+
+
+Check DNS Servers
+
+How to Set Static IP Address on Ubuntu Server Using Netplan
+
+We have seen how we can configure a static IP address graphically on Ubuntu 22.04 desktop. The other option is configuring a static IP address on the terminal using Netplan. Developed by Canonical, Netplan is a command-line utility used to configure networking on modern Ubuntu distributions. Netplan makes use of YAML files to configure network interfaces. You can configure an interface to acquire an IP dynamically using DHCP protocol or set a static IP.
+
+If $netplan command is not working then install the net-tools:
+
+sudo apt-get install net-tools -y
+
+
 
 Open your terminal and head over to the /etc/netplan directory. You will find a YAML configuration file which you will use to configure the IP address.
 
 In my case the YAML file is 01-network-manager-all.yaml with the default settings as shown.
-```
-cat >> /etc/netplan/00-installer-config.yaml << EOF
+## **Step3: Netplan YAML File**
+
+
+For the Ubuntu server, the YAML file is 00-installer-config.yaml and these are the default settings.
+
+Default Network Settings
+
+To configure a static IP, copy and paste the configuration below. Be mindful of the spacing in the YAML file.
+
 network:
-  version: 2
-  ethernets:
-     enp0s3:
-        dhcp4: false
-        addresses: [192.168.2.100/24]
-        gateway4: 192.168.2.1
-        nameservers:
-          addresses: [8.8.8.8, 8.8.4.4]
-  
-EOF
-```
-Proceed by:
 
-`netplan apply`
+`  `version: 2
 
-check current ip
+`  `ethernets:
 
-`ifconfig`
+`     `ens33:
 
-ping with google public ip using command:
+`        `dhcp4: false
 
-`ping 8.8.8.8`
+`        `addresses: [192.168.29.104/24]
+
+`        `routes:
+
+`        `- to: default
+
+`          `via: 192.168.29.1
+
+`        `nameservers:
+
+`          `addresses: [8.8.8.8, 8.8.4.4]
+
+
+
+Next, save the file and run the netplan command below to save the changes.
+
+$ sudo netplan apply
+
+
+
+You can thereafter confirm the IP address of your network interface using the ifconfig command.
+
+$ ifconfig 
+
+Check Ubuntu Server IP Address
