@@ -1,5 +1,5 @@
 # **How to Configure Static IP Address on Ubuntu 20.04**
-` `![](Aspose.Words.bb211244-1601-4078-91ad-7dc964c81cf1.001.png)
+` `![image](Aspose.Words.bb211244-1601-4078-91ad-7dc964c81cf1.001.png)
 
 Usually, when a client system connects to a network via WIFI or an ethernet cable, it automatically picks an IP address from the router. This is made possible through the DHCP server which auto-assigns IP addresses to clients from a pool of addresses. The drawback with DHCP is that once the DHCP lease time has lapsed, the IP address of a system changes to a different one, and this leads to a disconnection in case the system was used for a particular service such as a file server. For this reason, you may want to set a static IP address so that it never changes even when the lease time is up.
 
