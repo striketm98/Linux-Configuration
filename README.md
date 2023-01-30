@@ -1,9 +1,9 @@
 # **How to Configure Static IP Address on Ubuntu 20.04**
 
-   <img src="https://user-images.githubusercontent.com/65080702/215354246-17481ed9-935f-414d-a04e-34e2f8d2d82a.png" width="150" height="120">    
-
 The drawback with DHCP is that once the DHCP lease time has lapsed, the IP address of a system changes to a different one, and this leads to a disconnection in case the system was used for a particular service such as a file server. For this reason, you may want to set a static IP address so that it never changes even when the lease time is up.
 
+<img src="https://user-images.githubusercontent.com/65080702/215354246-17481ed9-935f-414d-a04e-34e2f8d2d82a.png" width="150" height="120">    
+   
 In this guide, you will learn how to configure a static IP address on Ubuntu 20.04 server and desktop.
 
 ## **Step1:  Network Configuration**
